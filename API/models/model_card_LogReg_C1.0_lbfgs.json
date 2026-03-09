@@ -1,0 +1,12 @@
+{
+    "model_name": "LogReg_C1.0_lbfgs",
+    "vectorizer": "TfidfVectorizer",
+    "classifier": "LogisticRegression",
+    "dataset": "Sentiment140",
+    "preprocessing": "lowercase + remove URLs + mentions + hashtags + punctuation + normalize elongations",
+    "C": 1.0,
+    "solver": "lbfgs",
+    "penalty": "l2",
+    "f1_score": 0.8232077937024735,
+    "author": "Kevin"
+}
