@@ -1,0 +1,115 @@
+{
+  "dataset": "Sentiment140",
+  "metric": "f1_score",
+  "experiments": [
+    {"model":"Baseline Sentiment140","classifier":"MultinomialNB","vectorizer":"CountVectorizer","f1_score":0.782489,"author":"Nicolas"},
+    {"model":"NB BOW Lemmatization","classifier":"MultinomialNB","vectorizer":"CountVectorizer","f1_score":0.780971,"author":"Nicolas"},
+    {"model":"NB BOW Stopwords","classifier":"MultinomialNB","vectorizer":"CountVectorizer","f1_score":0.772333,"author":"Nicolas"},
+    {"model":"NB BOW Emoji Removal","classifier":"MultinomialNB","vectorizer":"CountVectorizer","f1_score":0.782489,"author":"Nicolas"},
+    {"model":"NB BOW Punctuation Removal","classifier":"MultinomialNB","vectorizer":"CountVectorizer","f1_score":0.782489,"author":"Nicolas"},
+    {"model":"NB BOW Elongation Normalization","classifier":"MultinomialNB","vectorizer":"CountVectorizer","f1_score":0.782939,"author":"Nicolas"},
+    {"model":"NB BOW NoPunct + ElongNorm","classifier":"MultinomialNB","vectorizer":"CountVectorizer","f1_score":0.782939,"author":"Nicolas"},
+    {"model":"NB BOW Stopwords + NoPunct + ElongNorm","classifier":"MultinomialNB","vectorizer":"CountVectorizer","f1_score":0.772914,"author":"Nicolas"},
+
+    {"model":"NB TFIDF Bigram","classifier":"MultinomialNB","vectorizer":"TFIDF","f1_score":0.804460,"author":"Kevin"},
+    {"model":"NB TFIDF Unigram","classifier":"MultinomialNB","vectorizer":"TFIDF","f1_score":0.775839,"author":"Kevin"},
+
+    {"model":"NN batch32 epochs5","classifier":"NeuralNetwork","vectorizer":"TFIDF","f1_score":0.777071,"author":"Nicolas"},
+    {"model":"NN batch64 epochs5","classifier":"NeuralNetwork","vectorizer":"TFIDF","f1_score":0.776329,"author":"Nicolas"},
+    {"model":"NN batch32 epochs10","classifier":"MLPClassifier","vectorizer":"TFIDF","f1_score":0.783524,"author":"Nicolas"},
+    {"model":"NN batch64 epochs10","classifier":"MLPClassifier","vectorizer":"TFIDF","f1_score":0.779016,"author":"Nicolas"},
+
+    {"model":"RF 10 trees","classifier":"RandomForest","vectorizer":"TFIDF","f1_score":0.687021,"author":"Kevin"},
+    {"model":"RF 20 trees","classifier":"RandomForest","vectorizer":"TFIDF","f1_score":0.718995,"author":"Kevin"},
+    {"model":"RF 50 trees","classifier":"RandomForest","vectorizer":"TFIDF","f1_score":0.733894,"author":"Kevin"},
+    {"model":"RF 100 trees","classifier":"RandomForest","vectorizer":"TFIDF","f1_score":0.739646,"author":"Kevin"},
+    {"model":"RF 200 trees","classifier":"RandomForest","vectorizer":"TFIDF","f1_score":0.739479,"author":"Kevin"},
+
+    {"model":"NN batch256 epochs5","classifier":"MLPClassifier","vectorizer":"TFIDF","f1_score":0.791505,"author":"Nicolas"},
+    {"model":"NN batch512 epochs5","classifier":"MLPClassifier","vectorizer":"TFIDF","f1_score":0.796742,"author":"Nicolas"},
+    {"model":"NN batch256 epochs8","classifier":"MLPClassifier","vectorizer":"TFIDF","f1_score":0.808854,"author":"Nicolas"},
+    {"model":"NN batch512 epochs8","classifier":"MLPClassifier","vectorizer":"TFIDF","f1_score":0.780076,"author":"Nicolas"},
+
+    {"model":"LogReg C0.1","classifier":"LogisticRegression","vectorizer":"TFIDF","f1_score":0.810158,"author":"Kevin"},
+    {"model":"LogReg C1.0","classifier":"LogisticRegression","vectorizer":"TFIDF","f1_score":0.823208,"author":"Kevin"},
+    {"model":"LogReg C10","classifier":"LogisticRegression","vectorizer":"TFIDF","f1_score":0.818478,"author":"Kevin"},
+
+    {"model":"HuggingFace DistilBERT","classifier":"Transformer","vectorizer":"raw text","f1_score":0.708217,"author":"Nicolas"},
+
+    {"model":"SVM C0.1","classifier":"LinearSVC","vectorizer":"TFIDF","f1_score":0.824013,"author":"Kevin"},
+    {"model":"SVM C1","classifier":"LinearSVC","vectorizer":"TFIDF","f1_score":0.815243,"author":"Kevin"},
+    {"model":"SVM C10","classifier":"LinearSVC","vectorizer":"TFIDF","f1_score":0.801127,"author":"Kevin"}
+  ],
+
+  "best_model": {
+    "model":"SVM C0.1",
+    "classifier":"LinearSVC",
+    "vectorizer":"TFIDF",
+    "f1_score":0.824013,
+    "author":"Kevin"
+  },
+
+  "work_distribution":[
+    {"author":"Nicolas","experiments":16},
+    {"author":"Kevin","experiments":15}
+  ],
+
+  "conclusions": "Los experimentos muestran que los modelos lineales con representaciones TF-IDF obtienen el mejor desempeño en el dataset Sentiment140. El mejor resultado corresponde al modelo SVM con C=0.1, alcanzando un F1-score de 0.824. Los modelos de regresión logística presentan resultados similares, mientras que Naive Bayes y Random Forest obtienen rendimientos inferiores. Las redes neuronales logran resultados competitivos pero ligeramente por debajo de los modelos lineales. Finalmente, el modelo de HuggingFace DistilBERT evaluado sin fine-tuning obtiene un rendimiento significativamente menor en comparación con los modelos clásicos optimizados."
+}{
+  "dataset": "Sentiment140",
+  "metric": "f1_score",
+  "experiments": [
+    {"model":"Baseline Sentiment140","classifier":"MultinomialNB","vectorizer":"CountVectorizer","f1_score":0.782489,"author":"Nicolas"},
+    {"model":"NB BOW Lemmatization","classifier":"MultinomialNB","vectorizer":"CountVectorizer","f1_score":0.780971,"author":"Nicolas"},
+    {"model":"NB BOW Stopwords","classifier":"MultinomialNB","vectorizer":"CountVectorizer","f1_score":0.772333,"author":"Nicolas"},
+    {"model":"NB BOW Emoji Removal","classifier":"MultinomialNB","vectorizer":"CountVectorizer","f1_score":0.782489,"author":"Nicolas"},
+    {"model":"NB BOW Punctuation Removal","classifier":"MultinomialNB","vectorizer":"CountVectorizer","f1_score":0.782489,"author":"Nicolas"},
+    {"model":"NB BOW Elongation Normalization","classifier":"MultinomialNB","vectorizer":"CountVectorizer","f1_score":0.782939,"author":"Nicolas"},
+    {"model":"NB BOW NoPunct + ElongNorm","classifier":"MultinomialNB","vectorizer":"CountVectorizer","f1_score":0.782939,"author":"Nicolas"},
+    {"model":"NB BOW Stopwords + NoPunct + ElongNorm","classifier":"MultinomialNB","vectorizer":"CountVectorizer","f1_score":0.772914,"author":"Nicolas"},
+
+    {"model":"NB TFIDF Bigram","classifier":"MultinomialNB","vectorizer":"TFIDF","f1_score":0.804460,"author":"Kevin"},
+    {"model":"NB TFIDF Unigram","classifier":"MultinomialNB","vectorizer":"TFIDF","f1_score":0.775839,"author":"Kevin"},
+
+    {"model":"NN batch32 epochs5","classifier":"NeuralNetwork","vectorizer":"TFIDF","f1_score":0.777071,"author":"Nicolas"},
+    {"model":"NN batch64 epochs5","classifier":"NeuralNetwork","vectorizer":"TFIDF","f1_score":0.776329,"author":"Nicolas"},
+    {"model":"NN batch32 epochs10","classifier":"MLPClassifier","vectorizer":"TFIDF","f1_score":0.783524,"author":"Nicolas"},
+    {"model":"NN batch64 epochs10","classifier":"MLPClassifier","vectorizer":"TFIDF","f1_score":0.779016,"author":"Nicolas"},
+
+    {"model":"RF 10 trees","classifier":"RandomForest","vectorizer":"TFIDF","f1_score":0.687021,"author":"Kevin"},
+    {"model":"RF 20 trees","classifier":"RandomForest","vectorizer":"TFIDF","f1_score":0.718995,"author":"Kevin"},
+    {"model":"RF 50 trees","classifier":"RandomForest","vectorizer":"TFIDF","f1_score":0.733894,"author":"Kevin"},
+    {"model":"RF 100 trees","classifier":"RandomForest","vectorizer":"TFIDF","f1_score":0.739646,"author":"Kevin"},
+    {"model":"RF 200 trees","classifier":"RandomForest","vectorizer":"TFIDF","f1_score":0.739479,"author":"Kevin"},
+
+    {"model":"NN batch256 epochs5","classifier":"MLPClassifier","vectorizer":"TFIDF","f1_score":0.791505,"author":"Nicolas"},
+    {"model":"NN batch512 epochs5","classifier":"MLPClassifier","vectorizer":"TFIDF","f1_score":0.796742,"author":"Nicolas"},
+    {"model":"NN batch256 epochs8","classifier":"MLPClassifier","vectorizer":"TFIDF","f1_score":0.808854,"author":"Nicolas"},
+    {"model":"NN batch512 epochs8","classifier":"MLPClassifier","vectorizer":"TFIDF","f1_score":0.780076,"author":"Nicolas"},
+
+    {"model":"LogReg C0.1","classifier":"LogisticRegression","vectorizer":"TFIDF","f1_score":0.810158,"author":"Kevin"},
+    {"model":"LogReg C1.0","classifier":"LogisticRegression","vectorizer":"TFIDF","f1_score":0.823208,"author":"Kevin"},
+    {"model":"LogReg C10","classifier":"LogisticRegression","vectorizer":"TFIDF","f1_score":0.818478,"author":"Kevin"},
+
+    {"model":"HuggingFace DistilBERT","classifier":"Transformer","vectorizer":"raw text","f1_score":0.708217,"author":"Nicolas"},
+
+    {"model":"SVM C0.1","classifier":"LinearSVC","vectorizer":"TFIDF","f1_score":0.824013,"author":"Kevin"},
+    {"model":"SVM C1","classifier":"LinearSVC","vectorizer":"TFIDF","f1_score":0.815243,"author":"Kevin"},
+    {"model":"SVM C10","classifier":"LinearSVC","vectorizer":"TFIDF","f1_score":0.801127,"author":"Kevin"}
+  ],
+
+  "best_model": {
+    "model":"SVM C0.1",
+    "classifier":"LinearSVC",
+    "vectorizer":"TFIDF",
+    "f1_score":0.824013,
+    "author":"Kevin"
+  },
+
+  "work_distribution":[
+    {"author":"Nicolas","experiments":16},
+    {"author":"Kevin","experiments":15}
+  ],
+
+  "conclusions": "Los experimentos muestran que los modelos lineales con representaciones TF-IDF obtienen el mejor desempeño en el dataset Sentiment140. El mejor resultado corresponde al modelo SVM con C=0.1, alcanzando un F1-score de 0.824. Los modelos de regresión logística presentan resultados similares, mientras que Naive Bayes y Random Forest obtienen rendimientos inferiores. Las redes neuronales logran resultados competitivos pero ligeramente por debajo de los modelos lineales. Finalmente, el modelo de HuggingFace DistilBERT evaluado sin fine-tuning obtiene un rendimiento significativamente menor en comparación con los modelos clásicos optimizados."
+}
