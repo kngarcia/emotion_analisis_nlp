@@ -7,7 +7,6 @@ mlflow
 matplotlib
 seaborn
 tqdm
-fastapi
 uvicorn
 joblib
 transformers
