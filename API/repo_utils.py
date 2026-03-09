@@ -1,3 +1,4 @@
+# repo_utils.py
 import requests
 from pathlib import Path
 
@@ -21,12 +22,16 @@ def download_file(url, save_path: Path):
             raise
 
 def fetch_artifacts():
+    """Descarga modelo, model card y reportes desde GitHub"""
     files = {
         "model": "models/best_model.pkl",
         "model_card": "models/model_card_LogReg_C1.0_lbfgs.json",
+        "ablation_results": "reports/ablation_results.json",
+        "f1_score": "reports/f1_score.csv",
+        "runtime_seconds": "reports/runtime_seconds.json",
     }
 
-    repo_base = "https://github.com/kngarcia/emotion_analisis_nlp.git"
+    repo_base = "https://raw.githubusercontent.com/kngarcia/emotion_analisis_nlp/main/"
 
     local_paths = {}
     for key, path in files.items():
