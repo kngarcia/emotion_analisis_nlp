@@ -1,0 +1,37 @@
+[
+  {
+    "dataset": "Sentiment140",
+    "runtime_results": [
+      {"model": "HuggingFace DistilBERT", "runtime_seconds": 640.3266},
+      {"model": "SVM C10", "runtime_seconds": 263.3599},
+      {"model": "SVM C1", "runtime_seconds": 138.2085},
+      {"model": "SVM C0.1", "runtime_seconds": 84.5628},
+      {"model": "LogReg C10", "runtime_seconds": 103.4212},
+      {"model": "LogReg C1", "runtime_seconds": 66.3376},
+      {"model": "LogReg C0.1", "runtime_seconds": 72.6181},
+      {"model": "NN batch512 epochs8", "runtime_seconds": 973.7553},
+      {"model": "NN batch256 epochs8", "runtime_seconds": 1999.7141},
+      {"model": "NN batch512 epochs5", "runtime_seconds": 281.0351},
+      {"model": "NN batch256 epochs5", "runtime_seconds": 539.5106},
+      {"model": "RF 100 trees", "runtime_seconds": 103.3362},
+      {"model": "RF 200 trees", "runtime_seconds": 13.3091},
+      {"model": "RF 50 trees", "runtime_seconds": 6.9189},
+      {"model": "RF 20 trees", "runtime_seconds": 5.6539},
+      {"model": "RF 10 trees", "runtime_seconds": 5.1840},
+      {"model": "NN batch64 epochs10", "runtime_seconds": 168.9056},
+      {"model": "NN batch32 epochs10", "runtime_seconds": 480.4728},
+      {"model": "NN batch64 epochs5", "runtime_seconds": 241.7510},
+      {"model": "NN batch32 epochs5", "runtime_seconds": 457.6688},
+      {"model": "NoPunct ElongNorm TFIDF Unigram NB", "runtime_seconds": 15.8904},
+      {"model": "NoPunct ElongNorm TFIDF Bigram NB", "runtime_seconds": 43.5943},
+      {"model": "Stop NoPunct ElongNorm BOW MultinomialNB", "runtime_seconds": 69.8343},
+      {"model": "NoPunct ElongNorm BOW MultinomialNB", "runtime_seconds": 94.3902},
+      {"model": "ElongationNorm BOW MultinomialNB", "runtime_seconds": 95.4617},
+      {"model": "PunctuationDrop BOW MultinomialNB", "runtime_seconds": 94.8047},
+      {"model": "EmojiDrop BOW MultinomialNB", "runtime_seconds": 95.1162},
+      {"model": "Stopwords BOW MultinomialNB", "runtime_seconds": 69.1506},
+      {"model": "Lem BOW MultinomialNB", "runtime_seconds": 93.6018},
+      {"model": "Baseline BOW MultinomialNB", "runtime_seconds": 15.8339}
+    ]
+  }
+]
