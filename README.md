@@ -25,7 +25,7 @@ All experiments are tracked using **MLflow**, and the final model is deployed th
 | **Task** | Binary Sentiment Classification |
 | **Classes** | Positive / Negative |
 | **Training samples** | 1,600,000 |
-| **Test samples** | 240000 |
+| **Test samples** | 240,000 |
 
 **Example tweet:** *"I love this movie so much!!"*
 **Labels:** `1` → Positive | `0` → Negative
