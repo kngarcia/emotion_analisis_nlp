@@ -6,6 +6,8 @@ datasets
 mlflow
 matplotlib
 seaborn
+joblib
+pydantic
 tqdm
 fastapi
 uvicorn
