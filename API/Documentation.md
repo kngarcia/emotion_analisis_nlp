@@ -152,7 +152,7 @@ class PredictResponse(BaseModel):
 
 1. **Install dependencies:** `pip install -r requirements.txt`
 2. **Run the server:** `uvicorn API.main:app --host 0.0.0.0 --port 8000`
-3. **Interactive Documentation:** Access Swagger UI at `http://<EC2_IP>:8000/docs`
+3. **Interactive Documentation:** Access Swagger UI at `http://ec2-52-90-75-165.compute-1.amazonaws.com:8000/docs` 
 
 ---
 
