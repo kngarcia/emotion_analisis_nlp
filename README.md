@@ -173,7 +173,8 @@ sentiment140/
 ---
 
 ## Mlflow link
-http://3.83.137.91:5000/
+http://ec2-52-90-75-165.compute-1.amazonaws.com:5000/
+http://ec2-52-90-75-165.compute-1.amazonaws.com:8080/docs
 
 ## Authors
 
